@@ -5,7 +5,7 @@ import CartWidget from "./CartWidget";
 function NavBar() {
     return (
         <div>
-            <div className="row bg-black p-3">
+            <div className="bg-black p-3">
                 <div className="col"></div>
                 <div className="col-md text-center overflow-x: hidden">
                     <a href="#">
