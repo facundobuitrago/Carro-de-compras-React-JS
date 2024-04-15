@@ -1,4 +1,4 @@
-import logo from "../assets/images/fightClub.png.png";
+import logo from "../assets/images/fightClub.png";
 import CartWidget from "./CartWidget";
 // import search from '../assets/images/search.svg';
 
