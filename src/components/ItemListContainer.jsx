@@ -1,16 +1,34 @@
-import ItemCount from "./ItemCount";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import arrayProductos from "./json/productos.json";
+import ItemList from "./ItemList";
+import Carousel from "./Carousel";
 
-// eslint-disable-next-line react/prop-types
-const ItemListContainer = ({mensaje}) => {
+const ItemListContainer = () => {
+    const [items, setItems] = useState([]);
+    const {id} = useParams();
+
+    useEffect(() => {
+        const promesa = new Promise(resolve => {
+            setTimeout(() => {
+                resolve(id ? arrayProductos.filter(item => item.categoria == id) : arrayProductos);
+            }, 2000)
+        });
+        
+        promesa.then(respuesta => {
+            setItems(respuesta);
+        })
+    }, [id])
+
     return (
-        <div className="container">
-            <div className="row my-5">
-                <div className="col text-center">
-                    <h2>{mensaje}</h2>
-                    <ItemCount stock={10}/>
+        <>
+            {id ? "" : <Carousel />}
+            <div className="container">
+                <div className="row my-5 display-flex justify-content-center " >
+                    <ItemList items={items} />
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

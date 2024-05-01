@@ -1,5 +1,8 @@
+import { Link, NavLink } from "react-router-dom"; // Importa el componente Link
 import logo from "../assets/images/fightClub.png";
 import CartWidget from "./CartWidget";
+
+
 // import search from '../assets/images/search.svg';
 
 function NavBar() {
@@ -8,9 +11,10 @@ function NavBar() {
             <div className="bg-black p-3">
                 <div className="col"></div>
                 <div className="col-md text-center overflow-x: hidden">
-                    <a href="#">
+                    {/* Utiliza Link en lugar de <a> */}
+                    <Link to="/">
                         <img src={logo} alt="FIGHT-CLUB" width={320} />
-                    </a>
+                    </Link>
                 </div>
                 <div className="col d-flex align-items-center justify-content-end">
                     <CartWidget />
@@ -38,46 +42,41 @@ function NavBar() {
                             id="navbarSupportedContent"
                         >
                             <ul className="navbar-nav mb-2 mb-lg-0">
+                                
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">
+                                    <NavLink className="nav-link active" aria-current="page" to="/">
                                         Inicio
-                                    </a>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a
+                                    <NavLink
                                         className="nav-link dropdown-toggle"
-                                        href="#"
+                                        to="/catalogo"
                                         role="button"
                                         data-bs-toggle="dropdown"
                                         aria-expanded="false"
                                     >
                                         Catálogo
-                                    </a>
+                                    </NavLink>
                                     <ul className="dropdown-menu">
                                         <li>
-                                            <a className="dropdown-item" href="#">
-                                                Remeras
-                                            </a>
+                                        <NavLink className="dropdown-item" to={"/categoria/remera"}>Remeras</NavLink>
                                         </li>
+                                        <hr className="dropdown-divider" />
                                         <li>
-                                            <a className="dropdown-item" href="#">
-                                                Musculosas
-                                            </a>
+                                            <NavLink className="dropdown-item" to="/categoria/campera">
+                                                Camperas
+                                            </NavLink>
                                         </li>
                                         <li>
                                             <hr className="dropdown-divider" />
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
-                                                Calzado
-                                            </a>
+                                            <NavLink className="dropdown-item" to="/categoria/pantalon">
+                                                Pantalones
+                                            </NavLink>
                                         </li>
                                     </ul>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">
-                                        Accesorios
-                                    </a>
                                 </li>
                             </ul>
                         </div>

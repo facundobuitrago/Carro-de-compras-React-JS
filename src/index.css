@@ -7,3 +7,6 @@ display: flex !important;
     flex-wrap: wrap;
 }
 
+.carousel-image {
+  height: 1400px; 
+}
