@@ -6,7 +6,7 @@ import Carousel from "./Carousel";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-    const {id} = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
         const promesa = new Promise(resolve => {
@@ -14,7 +14,7 @@ const ItemListContainer = () => {
                 resolve(id ? arrayProductos.filter(item => item.categoria == id) : arrayProductos);
             }, 2000)
         });
-        
+
         promesa.then(respuesta => {
             setItems(respuesta);
         })

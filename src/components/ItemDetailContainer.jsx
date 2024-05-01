@@ -4,8 +4,8 @@ import arrayProductos from "./json/productos.json";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState([]);
-    const {id} = useParams();
+    const [item, setItems] = useState([null]);
+    const { id } = useParams();
 
     useEffect(() => {
         const promesa = new Promise(resolve => {
@@ -14,9 +14,9 @@ const ItemDetailContainer = () => {
                 resolve(producto);
             }, 2000)
         });
-        
+
         promesa.then(respuesta => {
-            setItem(respuesta);
+            setItems(respuesta);
         })
     }, [id])
 

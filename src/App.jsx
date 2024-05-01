@@ -10,7 +10,7 @@ function App() {
 
   return (
 
-      <BrowserRouter>
+    <BrowserRouter>
       <Header />
       <NavBar />
       <Routes>
@@ -19,9 +19,9 @@ function App() {
         <Route path={"/item/:id"} element={<ItemDetailContainer />} />
       </Routes>
       <Footer />
-      </BrowserRouter>
+    </BrowserRouter>
 
-    
+
   )
 }
 

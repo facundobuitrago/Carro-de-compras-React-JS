@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({ stock }) => {
     const [contador, setContador] = useState(1);
     const [itemStock, setItemStock] = useState(stock);
 
@@ -26,9 +26,9 @@ const ItemCount = ({stock}) => {
 
     useEffect(() => {
         setItemStock(stock);
-    },[stock])
+    }, [stock])
 
-    return ( 
+    return (
         <div className="container">
             <div className="row">
                 <div className="col">
