@@ -5,18 +5,20 @@ import ItemList from "./ItemList";
 import Carousel from "./Carousel";
 
 const ItemListContainer = () => {
-    const [items, setItems] = useState([]);
+    const [items, setItem] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
         const promesa = new Promise(resolve => {
             setTimeout(() => {
-                resolve(id ? arrayProductos.filter(item => item.categoria == id) : arrayProductos);
+                resolve(id ? arrayProductos.filter(item => item.categoria === id) : arrayProductos);
             }, 2000)
         });
-
+    
         promesa.then(respuesta => {
-            setItems(respuesta);
+            setItem(respuesta);
+        }).catch(error => {
+            console.error('Error al obtener los datos:', error);
         })
     }, [id])
 
