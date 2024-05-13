@@ -4,8 +4,7 @@
         "nombre": "Remera Verona",
         "descripcion": "Remera de confección soft 100% algodón seleccionado de una alta calidad. Producto elegante de cuello redondo y cartera con botones negros. Puños de mangas con dobladillo. Detalle de color de ojal y atraques en combinación al logo bordado en su frente.",
         "precio": "39990",
-        "imagen": "https://www.brooksfieldstore.com/37670-thickbox_default/remera-verona.jpg",
-        "stock": 10,
+        "imagen": "/src/assets/images/remera-verona.jpg", "stock": 10,
         "categoria": "remera"
     },
     {
@@ -13,7 +12,7 @@
         "nombre": "Remera Print B3",
         "descripcion": "Remera en jersey de algodón, cuello redondo y mangas largas con puño de reeb. Diseño estampado en el frente de la prenda de tacto suave, etiqueta grifa marcaria en el ruedo de la prenda.",
         "precio": "33790",
-        "imagen": "https://www.brooksfieldstore.com/36066-thickbox_default/remera-print-b3.jpg",
+        "imagen": "/src/assets/images/remera-print-b3.jpg",
         "stock": 10,
         "categoria": "remera"
     },
@@ -22,7 +21,7 @@
         "nombre": "Remera Logo V Embroidery",
         "descripcion": "Remera en jersey de algodón, cuello en V.",
         "precio": "26091 ",
-        "imagen": "https://www.brooksfieldstore.com/33486-thickbox_default/remera-logo-v-embroidery.jpg",
+        "imagen": "/src/assets/images/remera-logo-v-embroidery.jpg",
         "stock": 10,
         "categoria": "remera"
     },
@@ -31,7 +30,7 @@
         "nombre": "Campera Rowan",
         "descripcion": "Campera liviana con un gran poder de aislación térmica, es un diseño muy reconocido a nivel mundial por sus cualidades estéticas y de comportamiento frente a climas fríos o de estación media, logrando un look que no descuida protegerte cuando lo necesitas.",
         "precio": "224990",
-        "imagen": "https://www.brooksfieldstore.com/35526-thickbox_default/campera-rowan.jpg",
+        "imagen": "/src/assets/images/campera-rowan.jpg",
         "stock": 10,
         "categoria": "campera"
     },
@@ -40,7 +39,7 @@
         "nombre": "Campera Barrett",
         "descripcion": "Campera de Tech Fleece y corderito. Corte recto, y cuello alto. Cintura y puños de mangas con terminaciones elásticas para impedir el ingreso de frío. Amplios bolsillos laterales y uno en el pecho, todos con cierre. Producto importado.",
         "precio": "105800",
-        "imagen": "https://www.brooksfieldstore.com/37323-thickbox_default/campera-barrett.jpg",
+        "imagen": "/src/assets/images/campera-barrett.jpg",
         "stock": 10,
         "categoria": "campera"
     },
@@ -49,7 +48,7 @@
         "nombre": "Campera Benny",
         "descripcion": "Campera confeccionada en micropolar con excelente aislación térmica para la temporada otoño/invierno. Ideal para actividades outdoor y uso urbano. De cuello alto, amplios bolsillos laterales y terminaciones elásticas en cintura y puños para impedir el ingreso del frio. Producto importado de calidad premium.",
         "precio": "73313 ",
-        "imagen": "https://www.brooksfieldstore.com/36267-thickbox_default/campera-benny.jpg",
+        "imagen": "/src/assets/images/campera-benny.jpg",
         "stock": 10,
         "categoria": "campera"
     },
@@ -58,7 +57,7 @@
         "nombre": "Pantalon Francesco Corderoy",
         "descripcion": "Pantalón de corte recto cinco bolsillos en corderoy de 8 bastas. La pierna es suelta desde la cadera hasta el tobillo. Confección reforzada con doble costuras y bolsillos traseros con recorte. Badana y grifa marcaria de eco cuero.",
         "precio": "84813",
-        "imagen": "https://www.brooksfieldstore.com/37092-thickbox_default/pantalon-francesco-corderoy.jpg",
+        "imagen": "/src/assets/images/pantalon-francesco-corderoy.jpg",
         "stock": 10,
         "categoria": "pantalon"
     },
@@ -67,7 +66,7 @@
         "nombre": "Jean Firenze Gray",
         "descripcion": "Jean de corte slim fit: más ajustado al cuerpo que los cortes tradicionales, sin ser demasiado ceñido al cuerpo. Tono de lavado gris oscuro, con suave localizado y bigotes en el delantero.",
         "precio": "87490",
-        "imagen": "https://www.brooksfieldstore.com/33965-thickbox_default/jean-firenze-gray.jpg",
+        "imagen": "/src/assets/images/jean-firenze-gray.jpg",
         "stock": 10,
         "categoria": "pantalon"
     },
@@ -76,7 +75,7 @@
         "nombre": "Pantalón Chino Fairbanks",
         "descripcion": "Pantalón chino de gabardina confort con un poco de elasticidad para mayor comodidad. Producto importado con detalles y terminaciones de primera calidad.",
         "precio": "124790",
-        "imagen": "https://www.brooksfieldstore.com/31788-thickbox_default/pantalon-chino-fairbanks.jpg",
+        "imagen": "/src/assets/images/pantalon-chino-fairbanks.jpg",
         "stock": 10,
         "categoria": "pantalon"
     }
