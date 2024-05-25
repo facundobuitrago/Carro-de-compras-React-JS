@@ -1,6 +1,11 @@
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ item }) => {
+
+    const onAdd = (quantity) => {
+        console.log("Agregaste: " + quantity + " productos.");
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -11,7 +16,7 @@ const ItemDetail = ({ item }) => {
                     <h1 className="fs-3 text-uppercase fw-semibold">{item.nombre}</h1>
                     <p className="fs-4 fw-bold">${item.precio}</p>
                     <p className="small">{item.descripcion}</p>
-                    <ItemCount stock={item.stock} />
+                    <ItemCount stock={item.stock} onAdd={onAdd} />
                 </div>
             </div>
         </div>
