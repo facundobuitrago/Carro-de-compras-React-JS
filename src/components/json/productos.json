@@ -5,7 +5,7 @@
         "descripcion": "Remera de confección soft 100% algodón seleccionado de una alta calidad. Producto elegante de cuello redondo y cartera con botones negros. Puños de mangas con dobladillo. Detalle de color de ojal y atraques en combinación al logo bordado en su frente.",
         "precio": "39990",
         "imagen": "/src/assets/images/remera-verona.jpg", "stock": 10,
-        "categoria": "remera"
+        "categoria": "remeras"
     },
     {
         "id": 2,
@@ -14,7 +14,7 @@
         "precio": "33790",
         "imagen": "/src/assets/images/remera-print-b3.jpg",
         "stock": 10,
-        "categoria": "remera"
+        "categoria": "remeras"
     },
     {
         "id": 3,
@@ -23,7 +23,7 @@
         "precio": "26091 ",
         "imagen": "/src/assets/images/remera-logo-v-embroidery.jpg",
         "stock": 10,
-        "categoria": "remera"
+        "categoria": "remeras"
     },
     {
         "id": 4,
@@ -32,7 +32,7 @@
         "precio": "224990",
         "imagen": "/src/assets/images/campera-rowan.jpg",
         "stock": 10,
-        "categoria": "campera"
+        "categoria": "camperas"
     },
     {
         "id": 5,
@@ -41,7 +41,7 @@
         "precio": "105800",
         "imagen": "/src/assets/images/campera-barrett.jpg",
         "stock": 10,
-        "categoria": "campera"
+        "categoria": "camperas"
     },
     {
         "id": 6,
@@ -50,7 +50,7 @@
         "precio": "73313 ",
         "imagen": "/src/assets/images/campera-benny.jpg",
         "stock": 10,
-        "categoria": "campera"
+        "categoria": "camperas"
     },
     {
         "id": 7,
@@ -59,7 +59,7 @@
         "precio": "84813",
         "imagen": "/src/assets/images/pantalon-francesco-corderoy.jpg",
         "stock": 10,
-        "categoria": "pantalon"
+        "categoria": "pantalones"
     },
     {
         "id": 8,
@@ -68,7 +68,7 @@
         "precio": "87490",
         "imagen": "/src/assets/images/jean-firenze-gray.jpg",
         "stock": 10,
-        "categoria": "pantalon"
+        "categoria": "pantalones"
     },
     {
         "id": 9,
@@ -77,6 +77,6 @@
         "precio": "124790",
         "imagen": "/src/assets/images/pantalon-chino-fairbanks.jpg",
         "stock": 10,
-        "categoria": "pantalon"
+        "categoria": "pantalones"
     }
 ]

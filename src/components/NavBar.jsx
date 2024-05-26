@@ -11,7 +11,6 @@ function NavBar() {
             <div className="bg-black p-3">
                 <div className="col"></div>
                 <div className="col-md text-center overflow-x: hidden">
-                    {/* Utiliza Link en lugar de <a> */}
                     <Link to="/">
                         <img src={logo} alt="FIGHT-CLUB" width={320} />
                     </Link>
@@ -60,11 +59,11 @@ function NavBar() {
                                     </NavLink>
                                     <ul className="dropdown-menu">
                                         <li>
-                                        <NavLink className="dropdown-item" to={"/categoria/remera"}>Remeras</NavLink>
+                                        <NavLink className="dropdown-item" to={"/category/Remeras"}>Remeras</NavLink>
                                         </li>
                                         <hr className="dropdown-divider" />
                                         <li>
-                                            <NavLink className="dropdown-item" to="/categoria/campera">
+                                            <NavLink className="dropdown-item" to="/category/Camperas">
                                                 Camperas
                                             </NavLink>
                                         </li>
@@ -72,7 +71,7 @@ function NavBar() {
                                             <hr className="dropdown-divider" />
                                         </li>
                                         <li>
-                                            <NavLink className="dropdown-item" to="/categoria/pantalon">
+                                            <NavLink className="dropdown-item" to="/category/Pantalones">
                                                 Pantalones
                                             </NavLink>
                                         </li>

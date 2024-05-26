@@ -7,10 +7,13 @@ const Carousel = () => {
                     <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active" data-bs-interval="3000">
-                                <img src="/images/slide1.jpg" className="d-block w-100" style={{ height: 'auto', maxHeight: '100vh' }} alt="..." />
+                                <img src="/images/slide1.jpg" className="d-block w-100" style={{ height: 'auto', maxHeight: '100vh' }} alt="otoño" />
                             </div>
                             <div className="carousel-item" data-bs-interval="3000">
-                                <img src="/images/slide3.jpg" className="d-block w-100" style={{ height: 'auto', maxHeight: '100vh' }} alt="..." />
+                                <img src="/images/slide2.jpg" className="d-block w-100" style={{ height: 'auto', maxHeight: '100vh' }} alt="abrigos" />
+                            </div>
+                            <div className="carousel-item" data-bs-interval="3000">
+                                <img src="/images/slide3.jpg" className="d-block w-100" style={{ height: 'auto', maxHeight: '100vh' }} alt="negro" />
                             </div>
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
