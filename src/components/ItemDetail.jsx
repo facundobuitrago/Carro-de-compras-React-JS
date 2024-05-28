@@ -1,15 +1,14 @@
 import { useContext } from "react";
 import { CartContext } from "./context/CartContext";
-import ItemCount from "./ItemCount"
+import ItemCount from "./ItemCount";
 
-
-const ItemDetail = ({item}) => {
-    const {addItem} = useContext(CartContext);
+const ItemDetail = ({ item }) => {
+    const { addItem } = useContext(CartContext);
 
     const onAdd = (quantity) => {
         addItem(item, quantity);
         console.log("Agregaste: " + quantity + " productos!");
-    }
+    };
 
     return (
         <div className="container">
@@ -25,7 +24,7 @@ const ItemDetail = ({item}) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ItemDetail;

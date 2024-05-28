@@ -12,10 +12,10 @@ const Checkout = () => {
 
     const generarOrden = () => {
         const buyer = {nombre:nombre, email:email, telephone:telephone};
-        const items = cart.map(item => ({id:item.id, title:item.nombre, price:item.precio}));
+        const productos = cart.map(item => ({id:item.id, title:item.nombre, price:item.precio}));
         const date = new Date();
         const currentDate = `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-        const order = {buyer:buyer, items:items, date:currentDate, total:getSumProducts()};
+        const order = {buyer:buyer, productos:productos, date:currentDate, total:getSumProducts()};
         
         // Agrego un nuevo Documento a la Colección Orders
         const db = getFirestore();

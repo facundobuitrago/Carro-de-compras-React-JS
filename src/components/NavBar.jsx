@@ -59,11 +59,11 @@ function NavBar() {
                                     </NavLink>
                                     <ul className="dropdown-menu">
                                         <li>
-                                        <NavLink className="dropdown-item" to={"/category/Remeras"}>Remeras</NavLink>
+                                        <NavLink className="dropdown-item" to={"/categoria/Remeras"}>Remeras</NavLink>
                                         </li>
                                         <hr className="dropdown-divider" />
                                         <li>
-                                            <NavLink className="dropdown-item" to="/category/Camperas">
+                                            <NavLink className="dropdown-item" to="/categoria/Camperas">
                                                 Camperas
                                             </NavLink>
                                         </li>
@@ -71,7 +71,7 @@ function NavBar() {
                                             <hr className="dropdown-divider" />
                                         </li>
                                         <li>
-                                            <NavLink className="dropdown-item" to="/category/Pantalones">
+                                            <NavLink className="dropdown-item" to="/categoria/Pantalones">
                                                 Pantalones
                                             </NavLink>
                                         </li>

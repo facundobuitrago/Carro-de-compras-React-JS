@@ -1,37 +1,49 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const ItemCount = ({stock, onAdd}) => { //10
+
+
+const ItemCount = ({ stock, onAdd }) => {
     const [contador, setContador] = useState(1);
     const [itemStock, setItemStock] = useState(stock);
     const [visible, setVisible] = useState(true);
 
     const incrementar = () => {
-        if (contador < itemStock) {
-            setContador(contador + 1);
-        }
-    }
+        setContador(prevContador => {
+            if (prevContador < itemStock) {
+                return prevContador + 1;
+            }
+            return prevContador;
+        });
+        console.log("incrementando");
+    };
 
     const decrementar = () => {
-        if (contador > 1) {
-            setContador(contador - 1);
-        }
-    }
+        setContador(prevContador => {
+            if (prevContador > 1) {
+                return prevContador - 1;
+            }
+            return prevContador;
+        });
+        console.log("decrementando");
+    };
 
     const addToCart = () => {
-        if (contador <= itemStock) {
+        if (contador <= itemStock && typeof onAdd === 'function') {
             setItemStock(itemStock - contador);
             onAdd(contador);
             setContador(1);
             setVisible(false);
+        } else {
+            console.error("onAdd no es una función");
         }
-    }
+        console.log("agregando al carrito");
+    };
 
     useEffect(() => {
         setItemStock(stock);
-    }, [stock])
+    }, [stock]);
 
-    
     return (
         <div className="container">
             <div className="row">
@@ -45,15 +57,7 @@ const ItemCount = ({stock, onAdd}) => { //10
             </div>
             <div className="row my-1">
                 <div className="col">
-                    {visible ? (
-                        <button type="button" className="btn btn-dark btn-block text-uppercase" onClick={addToCart}>
-                            Agregar Al Carrito
-                        </button>
-                    ) : (
-                        <Link to="./Cart.jsx" className="btn bg-black text-white text-uppercase rounded-0">
-                            Finalizar Compra
-                        </Link>
-                    )}
+                {visible ? <button type="button" className="btn bg-black text-white text-uppercase rounded-0" onClick={addToCart}>Agregar Al Carrito</button> : <Link to={"/cart"} className="btn bg-black text-white text-uppercase rounded-0">Finalizar Compra</Link>  }
                 </div>
             </div>
         </div>
