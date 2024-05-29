@@ -6,16 +6,16 @@ import trash from "../assets/images/eliminar.svg";
 const Cart = () => {
     const { cart, removeItem, clear, getCountProducts, getSumProducts } = useContext(CartContext);
 
-    if (getCountProducts() == 0) {
+    if (getCountProducts() === 0) {
         return (
             <div className="container my-5">
-                <div className="row">
-                    <div className="col text-center">
-                        <h3>No se encontraron Productos en el Carrito!</h3>
-                        <Link to={"/"} className="btn text-white bg-dark rounded-0 my-5">Volver a la Página Principal</Link>
-                    </div>
+            <div className="row">
+                <div className="col text-center">
+                    <h3>El carrito esta vacio!</h3>
+                    <Link to={"/"} className="btn text-white bg-dark rounded-0 my-5">Ir a la página principal</Link>
                 </div>
             </div>
+        </div>
         )
     }
 

@@ -9,20 +9,20 @@ const Checkout = () => {
     const { cart, getCountProducts, getSumProducts } = useContext(CartContext);
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
-    const [telephone, setTelephone] = useState("");
+    const [telefono, setTelefono] = useState("");
     const [orderId, setOrderId] = useState("");
     const [isDisabled, setIsDisabled] = useState(true);
 
     useEffect(() => {
-        if (nombre && email && telephone) {
+        if (nombre && email && telefono) {
             setIsDisabled(false);
         } else {
             setIsDisabled(true);
         }
-    }, [nombre, email, telephone]);
+    }, [nombre, email, telefono]);
 
     const generarOrden = () => {
-        const buyer = { nombre: nombre, email: email, telephone: telephone };
+        const buyer = { nombre: nombre, email: email, telefono: telefono };
         const productos = cart.map(item => ({ id: item.id, title: item.nombre, price: item.precio }));
         const date = new Date();
         const currentDate = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
@@ -47,8 +47,8 @@ const Checkout = () => {
             <div className="container my-5">
                 <div className="row">
                     <div className="col text-center">
-                        <h3>No se encontraron Productos en el Carrito!</h3>
-                        <Link to={"/"} className="btn text-white bg-dark rounded-0 my-5">Volver a la Página Principal</Link>
+                        <h3>El carrito esta vacio!</h3>
+                        <Link to={"/"} className="btn text-white bg-dark rounded-0 my-5">Ir a la página principal</Link>
                     </div>
                 </div>
             </div>
@@ -69,8 +69,8 @@ const Checkout = () => {
                             <input type="text" className="form-control" onInput={(e) => { setEmail(e.target.value) }} />
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Telephone</label>
-                            <input type="text" className="form-control" onInput={(e) => { setTelephone(e.target.value) }} />
+                            <label className="form-label">Telefono</label>
+                            <input type="text" className="form-control" onInput={(e) => { setTelefono(e.target.value) }} />
                         </div>
                         <button type="button" className="btn text-white bg-black" onClick={generarOrden} disabled={isDisabled}>Generar Orden</button>
                     </form>
