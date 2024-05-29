@@ -8,6 +8,7 @@ import Error404 from "./components/Error404";
 import Checkout from "./components/Checkout";
 import Cart from "./components/Cart";
 import CartContextProvider from './components/context/CartContext';
+import "./App.css";
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
+      <Footer />
     </CartContextProvider>
   );
 }
 
 export default App;
+

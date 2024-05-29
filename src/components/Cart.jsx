@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "./context/CartContext";
 import { Link } from "react-router-dom";
-import trash from "../assets/images/trash2.svg";
+import trash from "../assets/images/eliminar.svg";
 
 const Cart = () => {
-    const {cart, removeItem, clear, getCountProducts, getSumProducts} = useContext(CartContext);
+    const { cart, removeItem, clear, getCountProducts, getSumProducts } = useContext(CartContext);
 
     if (getCountProducts() == 0) {
         return (
@@ -26,7 +26,7 @@ const Cart = () => {
                     <table className="table">
                         <tbody>
                             <tr>
-                                <td colSpan={6} className="text-end"><button className="btn text-white bg-dark rounded-0" onClick={clear}>Vaciar Carrito</button></td>
+                                <td colSpan={6} className="text-end"><button className="btn btn-dark" onClick={clear}>Vaciar Carrito</button></td>
                             </tr>
                             {cart.map(item => (
                                 <tr key={item.id}>
@@ -35,13 +35,24 @@ const Cart = () => {
                                     <td className="align-middle text-center">${item.precio}</td>
                                     <td className="align-middle text-center">x{item.quantity}</td>
                                     <td className="align-middle text-center">${item.quantity * item.precio}</td>
-                                    <td className="align-middle text-end"><img src={trash} width={24} alt="Eliminar Producto" title="Eliminar Producto" onClick={() => {removeItem(item.id)}} /></td>
+                                    <td className="align-middle text-end">
+                                        <img
+                                            src={trash}
+                                            width={24}
+                                            alt="Eliminar Producto"
+                                            title="Eliminar Producto"
+                                            onClick={() => { removeItem(item.id) }}
+                                            className="hover-effect pointer-cursor"
+                                        />
+                                    </td>
+
+
                                 </tr>
                             ))}
                             <tr>
                                 <td colSpan={4} className="text-center"><b>Total</b></td>
                                 <td className="text-center"><b>${getSumProducts()}</b></td>
-                                <td className="text-end"><Link to={"/checkout"} className="btn text-white bg-dark rounded-0">Checkout</Link></td>
+                                <td className="text-end"><Link to={"/checkout"} className="btn btn-dark">Checkout</Link></td>
                             </tr>
                         </tbody>
                     </table>

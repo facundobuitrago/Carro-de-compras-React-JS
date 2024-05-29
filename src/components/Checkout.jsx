@@ -2,30 +2,47 @@ import { useContext, useState } from "react";
 import { CartContext } from "./context/CartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
+import { useEffect } from "react";
 
 const Checkout = () => {
-    const {cart, getCountProducts, getSumProducts} = useContext(CartContext);
+    const { cart, getCountProducts, getSumProducts } = useContext(CartContext);
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [telephone, setTelephone] = useState("");
     const [orderId, setOrderId] = useState("");
+    const [isDisabled, setIsDisabled] = useState(true);
+
+    useEffect(() => {
+        if (nombre && email && telephone) {
+            setIsDisabled(false);
+        } else {
+            setIsDisabled(true);
+        }
+    }, [nombre, email, telephone]);
 
     const generarOrden = () => {
-        const buyer = {nombre:nombre, email:email, telephone:telephone};
-        const productos = cart.map(item => ({id:item.id, title:item.nombre, price:item.precio}));
+        const buyer = { nombre: nombre, email: email, telephone: telephone };
+        const productos = cart.map(item => ({ id: item.id, title: item.nombre, price: item.precio }));
         const date = new Date();
-        const currentDate = `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-        const order = {buyer:buyer, productos:productos, date:currentDate, total:getSumProducts()};
-        
+        const currentDate = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+        const order = { buyer: buyer, productos: productos, date: currentDate, total: getSumProducts() };
+
         // Agrego un nuevo Documento a la Colección Orders
         const db = getFirestore();
         const ordersCollection = collection(db, "orders");
         addDoc(ordersCollection, order).then(data => {
             setOrderId(data.id);
+            // Mostrar la alerta de SweetAlert después de establecer el orderId
+            Swal.fire({
+                title: "¡Orden generada!",
+                text: `Tu ID de Compra es: ${data.id}`,
+                icon: "success"
+            });
         });
     }
 
-    if (getCountProducts() == 0) {
+    if (getCountProducts() === 0) {
         return (
             <div className="container my-5">
                 <div className="row">
@@ -35,7 +52,7 @@ const Checkout = () => {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 
     return (
@@ -45,18 +62,17 @@ const Checkout = () => {
                     <form>
                         <div className="mb-3">
                             <label className="form-label">Nombre</label>
-                            <input type="text" className="form-control" onInput={(e) => {setNombre(e.target.value)}} />
+                            <input type="text" className="form-control" onInput={(e) => { setNombre(e.target.value) }} />
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Email</label>
-                            <input type="text" className="form-control" onInput={(e) => {setEmail(e.target.value)}} />
+                            <input type="text" className="form-control" onInput={(e) => { setEmail(e.target.value) }} />
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Telephone</label>
-                            <input type="text" className="form-control" onInput={(e) => {setTelephone(e.target.value)}} />
+                            <input type="text" className="form-control" onInput={(e) => { setTelephone(e.target.value) }} />
                         </div>
-                        
-                        <button type="button" className="btn text-white bg-black" onClick={generarOrden}>Generar Orden</button>
+                        <button type="button" className="btn text-white bg-black" onClick={generarOrden} disabled={isDisabled}>Generar Orden</button>
                     </form>
                 </div>
                 <div className="col">
@@ -80,11 +96,11 @@ const Checkout = () => {
             </div>
             <div className="row my-5">
                 <div className="col text-center">
-                    {orderId ? <div className="alert alert-light" role="alert">Felicitaciones! Tu ID de Compra es: <b>{orderId}</b></div> : ""}
+                    {orderId && <div className="alert alert-light" role="alert">Felicitaciones! Tu ID de Compra es: <b>{orderId}</b></div>}
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Checkout;

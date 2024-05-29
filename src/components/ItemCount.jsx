@@ -57,7 +57,7 @@ const ItemCount = ({ stock, onAdd }) => {
             </div>
             <div className="row my-1">
                 <div className="col">
-                {visible ? <button type="button" className="btn bg-black text-white text-uppercase rounded-0" onClick={addToCart}>Agregar Al Carrito</button> : <Link to={"/cart"} className="btn bg-black text-white text-uppercase rounded-0">Finalizar Compra</Link>  }
+                {visible ? <button type="button" className="btn btn-dark" onClick={addToCart}>Agregar Al Carrito</button> : <Link to={"/cart"} className="btn btn-dark">Finalizar Compra</Link>  }
                 </div>
             </div>
         </div>
@@ -65,3 +65,4 @@ const ItemCount = ({ stock, onAdd }) => {
 };
 
 export default ItemCount;
+
