@@ -1,43 +1,86 @@
-## README - Proyecto React JS: Tienda Online
 
-**¡Bienvenido a mi proyecto de Tienda Online React!**
 
-Este proyecto te permite crear una tienda online con las siguientes funcionalidades:
+Aplicación web de carrito de compras desarrollada con **React JS**, **React Router** y **Firebase** como backend para productos. Ideal para prácticas de e-commerce, gestión de estado y ruteo dinámico.
 
-**Estructura organizada:**
+---
 
-* **Carpetas:** Cada sección de la aplicación está organizada en carpetas para mantener el código limpio y ordenado.
-    * **components:** Aquí encontrarás componentes reutilizables para construir la interfaz de usuario.
-    * **assets:** Imágenes y otros recursos estáticos de la tienda.
-    * **context:** Maneja el estado global del carrito de compras.
-    * **firebaseConfig:** Configura tu conexión con Firebase.
-    * **styles:** Estilos CSS para personalizar la apariencia de la tienda.
+## 📸 Captura de pantalla
 
-**Funcionalidades completas:**
+![image](https://github.com/user-attachments/assets/08f1044b-f046-4b83-9b51-01684cd47723)
 
-* **Ruteo:** Navega entre diferentes secciones de la tienda usando la URL.
-* **Productos:** Muestra una lista de productos con imágenes, nombres, precios y detalles.
-* **Detalles de producto:** Permite ver información completa de un producto específico.
-* **Carrito de compras:** Agrega, elimina y modifica los productos que deseas comprar.
-* **Checkout:** Completa tu compra ingresando tus datos y seleccionando un método de pago.
-* **Integración con Firebase:** Almacena tus productos en una base de datos en la nube para mayor flexibilidad y escalabilidad.
 
-**Comenzando:**
+---
 
-1. **Configuración:**
-    * Asegúrate de tener Node.js y npm instalados.
-    * Clona el repositorio del proyecto.
-    * Crea un archivo `firebaseConfig.js` con tu configuración de Firebase.
-2. **Ejecución:**
-    * Ejecuta `npm install` para instalar las dependencias.
-    * Ejecuta `npm start` o `yarn start` para iniciar el servidor de desarrollo local.
-3. **Acceso:**
-    * Ejecuta `npm run dev`. Local: http://localhost:****/
+## 🚀 Demo online
 
-**Recursos adicionales:**
+👉 [Ver demo en GitHub Pages o Vercel](https://facundobuitrago.github.io/Carro-de-compras-React-JS/)  
+_(Si aún no lo subiste, te puedo ayudar a hacerlo)_
 
-* **Documentación de React:** [https://legacy.reactjs.org/](https://legacy.reactjs.org/)
-* **Documentación de React Router DOM:** [https://reacttraining.com/react-router](https://reacttraining.com/react-router)
-* **Documentación de Firebase:** [https://firebase.google.com/](https://firebase.google.com/)
+---
 
+## ⚙️ Tecnologías utilizadas
+
+- ✅ React JS
+- ✅ React Router DOM
+- ✅ Firebase (Firestore)
+- ✅ Context API para el carrito
+- ✅ CSS personalizado y Google Fonts
+- ✅ Vite como bundler
+
+---
+
+## 📂 Estructura principal
+
+```bash
+/src
+ ├── components/
+ │   ├── Header.jsx
+ │   ├── NavBar.jsx
+ │   ├── ItemListContainer.jsx
+ │   ├── ItemDetailContainer.jsx
+ │   ├── Cart.jsx
+ │   ├── Checkout.jsx
+ │   ├── Footer.jsx
+ │   └── Error404.jsx
+ ├── context/
+ │   └── CartContext.jsx
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css
+🛠️ Cómo ejecutar localmente
+Clonar el repositorio:
+bash
+git clone https://github.com/facundobuitrago/Carro-de-compras-React-JS.git
+cd Carro-de-compras-React-JS
+Instalar dependencias:
+
+bash
+Copiar
+Editar
+npm install
+Iniciar la app:
+
+bash
+Copiar
+Editar
+npm run dev
+Abrí tu navegador en:
+arduino
+http://localhost:5173/
+🔐 Backend (Firebase)
+Base de datos: Firestore
+
+Autenticación opcional
+
+Configuración de Firebase incluida en main.jsx
+
+👨‍💻 Autor
+Facundo Nahuel Buitrago
+📍 Villa Adelina, Buenos Aires, Argentina
+📧 facundobuitrago@gmail.com
+🔗 LinkedIn
+
+📝 Licencia
+Este proyecto está bajo la Licencia MIT.
+Sentite libre de usarlo, mejorarlo o compartirlo con atribución.
 
