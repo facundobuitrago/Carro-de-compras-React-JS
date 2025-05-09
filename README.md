@@ -13,8 +13,7 @@ Aplicación web de carrito de compras desarrollada con **React JS**, **React Rou
 
 ## 🚀 Demo online
 
-👉 [Ver demo en GitHub Pages o Vercel](https://facundobuitrago.github.io/Carro-de-compras-React-JS/)  
-_(Si aún no lo subiste, te puedo ayudar a hacerlo)_
+👉 [Ver demo en GitHub Pages o Vercel](https://facundobuitrago.github.io/Carro-de-compras-React-JS/)  (En Trabajo.)
 
 ---
 
